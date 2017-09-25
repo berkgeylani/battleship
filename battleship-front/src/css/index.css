@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+}
+
+.finishedList {
+    background: whitesmoke;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.finishedGame {
+    text-align: center;
+    /*vertical-align: middle;*/
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    border-style: solid;
+    border-bottom: none;
+    border-width: thin;
+}
+
+.finishedGameInfo {
+    flex:1;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+
+.game {
+    flex: 10;
+    display: flex;
+    flex-direction: row;
+}
+
+.gameboard {
+    background: oldlace;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    min-height: 80vh;
+}
+
+.shootableBoard {
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+    flex: 1;
+}
+
+.shootable-item {
+    flex: 1;
+    cursor: move;
+}
+
+.shootable-item > img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+header {
+    text-align: center;
+    flex: 1;
+    background: rgba(160, 116, 251, 0.8);
+    min-height: 10vh;
+    font-family: "Droid Serif";
+}
+
+.join-game {
+    flex: 1;
+}
+
+.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.join-game > button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.gridRow {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.gridCell {
+    border-style: solid;
+    border-width: thin;
+    flex: 1;
+}
+
+.gridCell.over.nonLegal {
+    border-color: red;
+}
+
+.gridCell.over {
+    background-color:burlywood ;
+}
+
+.gridCell.withShootable {
+    background: green;
+}
+
+.gridCell.withShootable.hitted {
+    background: red;
+}
+
+.gridCell.hitted {
+    background: grey;
+}
+
+.winner {
+    background: rgba(208, 214, 48, 0.8);
+}
+
+.loser{
+    background: rgba(246, 50, 24, 0.78);
+}
+
