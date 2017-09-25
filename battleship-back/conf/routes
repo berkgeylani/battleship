@@ -1,0 +1,30 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET         /                                controllers.HomeController.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file                    controllers.Assets.versioned(path="/public", file: Asset)
+
+#Join Game Service
+PUT         /admiral/game                    controllers.GameController.joinGame
+
+#List Finished Game
+GET         /admiral/game/list               controllers.GameController.listFinishedGames
+
+#Export Game
+GET         /admiral/game/export/:gId        controllers.GameController.exportGame(gId:Long)
+
+#Get Replay Of A Game
+GET         /admiral/game/:gid/replay        controllers.GameController.getReplayOfGame(gid:Long)
+
+#Make Move controller
+POST        /admiral/game/:gid/attack        controllers.GameController.makeMove(gid:Long)
+
+#Check status service
+GET         /admiral/game/:gid/:pid          controllers.GameController.checkStatus(gid:Long,pid:String)
+
+#Get Finished Game
+GET         /admiral/game/:gid               controllers.GameController.getFinishedGame(gid:Long)
